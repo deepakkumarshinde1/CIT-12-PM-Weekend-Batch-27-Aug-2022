@@ -1,0 +1,72 @@
+HTML ==> HyperText Markup Language
+  Create a structure of web page
+
+  HyperText 
+    ==> Collection text & symbols
+        Navigation From One Page to Other Page
+  Markup 
+    are syntax pattern to create a page
+    <MarkupName> ==> Open Tag
+    </MarkupName> ==> Close Tag
+
+    <MarkupName> Data/Text/Content </MarkupName> ===> HTML Element 
+
+
+    Element are PreDefine 
+
+    #basic element to page
+        html ===> root(parent) element 
+        head ===> store information
+        body ===> display
+
+    # Topic
+      html element type
+        block element ===> print on new line (div)
+        inline element ==> print next to each other (span)
+
+      typography
+        h1,h2,h3,h4,h5,h6 ==> Heading Element
+        p
+        i , b , u , mark
+      images
+        img
+        <img src="" />
+        src => attribute (extra  function logic for element)
+        
+      list
+        unordered list
+          ul
+            li ==> List Item
+        ordered list
+          ol
+            li ==>
+        
+      table 
+        sName sMobile sCourse
+        table 
+          thead ==> table head (all headers)
+          tbody ==> table body (data)
+          tfoot ==> table foot (summery)
+          tr ==> table row
+          th ==> table heading (thead)
+          td ==> table data (tbody)
+
+      forms
+        name
+        mobile
+        email-id
+        gender
+        address
+        i agree
+      
+      login
+        username
+        password
+      
+      #element
+        form ==> send data to server
+        input
+        label
+        select 
+        textarea
+      layout

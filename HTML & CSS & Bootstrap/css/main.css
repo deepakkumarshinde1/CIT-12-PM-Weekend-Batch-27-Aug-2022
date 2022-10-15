@@ -1,0 +1,33 @@
+.brand {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  align-items: center;
+}
+
+.search-image > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.zomato-pagination li {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.zomato-pagination .active {
+  background-color: gray;
+  color: white;
+}

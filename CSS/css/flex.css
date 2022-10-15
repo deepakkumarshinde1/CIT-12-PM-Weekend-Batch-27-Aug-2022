@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex-item-1,
+.flex-item-2,
+.flex-item-3 {
+  width: 20%;
+  height: 50px;
+}
+.flex-item-1 {
+  background-color: red;
+}
+.flex-item-2 {
+  background-color: green;
+}
+
+.flex-item-3 {
+  background-color: magenta;
+}
+
+.flex-container {
+  height: 50vh;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: row; /*row (default)*/
+  justify-content: space-evenly; /* horizontals (default)*/
+  align-items: center; /* vertically (default)*/
+}

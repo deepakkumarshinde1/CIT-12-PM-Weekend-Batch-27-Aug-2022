@@ -1,0 +1,15 @@
+.block {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.span {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
