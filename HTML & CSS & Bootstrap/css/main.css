@@ -31,3 +31,17 @@
   background-color: gray;
   color: white;
 }
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .scroll-filter {
+    position: absolute;
+    width: 90%;
+    margin: auto 20px !important;
+    background-color: white !important;
+    z-index: 10;
+  }
+  .shift-top {
+    margin-top: 80px !important;
+  }
+}

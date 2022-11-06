@@ -21,23 +21,39 @@
   <body>
     <main class="container-fluid">
       <section class="main-section row bg-danger">
-        <header class="col-10 m-auto d-flex justify-content-between py-1">
+        <header
+          class="col-12 col-lg-10 col-md-10 m-auto d-flex justify-content-between py-1"
+        >
           <p class="brand m-0 fw-bold text-danger">Z</p>
           <div class="d-flex justify-content-end">
-            <button class="btn text-white mx-3">login</button>
+            <button class="btn text-white mx-0 mx-lg-3 mx-md-3">login</button>
 
             <button class="btn btn-outline-light">create an account</button>
           </div>
         </header>
       </section>
       <section class="row pt-3">
-        <section class="col-10 m-auto">
+        <section class="col-12 col-lg-10 col-md-10 m-auto">
           <h3 class="fw-bold">Breakfast Places In Mumbai</h3>
-          <section class="row gap-4">
+          <section class="row gap-lg-4 gap-lg-4 gap-0">
             <!-- filter -->
-            <section class="col-3 border border-2 p-3">
-              <p class="fs-6 fw-bold mb-1">Filter</p>
-              <article>
+            <section
+              class="col-lg-3 col-md-3 col-11 m-auto border border-2 p-3 scroll-filter"
+            >
+              <p class="fs-6 fw-bold mb-1 d-flex justify-content-between">
+                Filter
+                <button
+                  class="btn btn-primary btn-sm d-lg-none d-md-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#filterId"
+                  aria-expanded="true"
+                  aria-controls="filterId"
+                >
+                  Arrow
+                </button>
+              </p>
+              <article id="filterId" class="collapse d-lg-block d-md-block">
                 <!-- location -->
                 <div class="mb-3">
                   <label for="" class="form-label text-danger"
@@ -120,7 +136,9 @@
               </article>
             </section>
             <!-- restaurant search -->
-            <section class="col-8">
+            <section
+              class="col-lg-8 col-lg-8 col-12 my-3 my-lg-0 my-md-0 shift-top"
+            >
               <article class="border border-2 p-3 mb-3">
                 <div class="search-image d-flex gap-4">
                   <img src="/images/search-item.png" alt="" />
