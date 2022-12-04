@@ -1,0 +1,14 @@
+let a = 10;
+let b = 30;
+
+console.log(a + b);
+console.log(global);
+
+window => Global Object in browser
+global => Global Object in node js
+
+
+native module => http => create a server
+
+HTTP 8080
+HTTPS 443
