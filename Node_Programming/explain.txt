@@ -12,3 +12,13 @@ native module => http => create a server
 
 HTTP 8080
 HTTPS 443
+
+NODE JS + NPM
+NPM ==> Node Package Manager
+
+Package => set of code (zomato api)
+NPM => CLI (command line interface)
+    => Configure our project => npm init || npm init -y
+    => Install The packages => npm i pkgName || npm install pkgName
+    => Update The packages => npm update pkgName
+    => Remove A package =>  npm un pkgName || npm uninstall pkgName
