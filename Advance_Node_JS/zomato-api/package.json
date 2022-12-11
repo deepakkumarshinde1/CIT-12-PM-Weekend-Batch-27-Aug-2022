@@ -1,0 +1,15 @@
+{
+  "name": "zomato-api",
+  "version": "0.1.0",
+  "description": "This a zomato like clone",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "deepak@confluence",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
