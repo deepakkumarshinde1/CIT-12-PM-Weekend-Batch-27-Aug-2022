@@ -1,0 +1,26 @@
+[
+  {
+    "city": "mumbai",
+    "city_id": 1,
+    "location_id": 1,
+    "locality": "CST"
+  },
+  {
+    "city": "Pune",
+    "city_id": 2,
+    "location_id": 2,
+    "locality": "Katraj"
+  },
+  {
+    "city": "Pune",
+    "city_id": 2,
+    "location_id": 3,
+    "locality": "Swargate"
+  },
+  {
+    "city": "Nashik",
+    "city_id": 3,
+    "location_id": 4,
+    "locality": "Dahi Pool"
+  }
+]

@@ -1,0 +1,27 @@
+🥇 Express js have/has in-build http routing
+    # to handel routing we have HTTP Methods
+        👍 GET => send data from server to client (default)
+        👍 POST => To save new record over server
+        👍 PUT => To Update a record over server
+        👍 DELETE => To Delete a record over server
+
+    # app.get(path,handler)
+    # app.post(path,handler)
+    # app.put(path,handler)
+    # app.delete(path,handler)
+       
+    🥇 Testing Tool POSTMAN
+        👍 Its a REST API TESTING Tool
+        👍 Its very easy to work and test the REST API 😃
+        👍 API ==> Application Programming Interface
+        👍 REST => Representational State Transfer
+    
+    🥈 HTTP States
+        👍 100 ... 199
+        👍 200 ... 299 response message e.g 200 (ok) all is well
+        👍 300 ... 399
+        👍 400 ... 499 (client error) 404 (Not Found) Data us not available
+        👍 500 ... 599 (server error)
+
+        🏁 200,404,401,403,500
+

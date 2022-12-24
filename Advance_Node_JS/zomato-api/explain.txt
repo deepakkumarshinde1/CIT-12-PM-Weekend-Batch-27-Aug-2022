@@ -1,27 +1,30 @@
-🥇 Express js have/has in-build http routing
-    # to handel routing we have HTTP Methods
-        👍 GET => send data from server to client (default)
-        👍 POST => To save new record over server
-        👍 PUT => To Update a record over server
-        👍 DELETE => To Delete a record over server
+API 
+    /get-location-list 
+    /get-restaurant-list-by-location-id
+    /get-meal-type-list
 
-    # app.get(path,handler)
-    # app.post(path,handler)
-    # app.put(path,handler)
-    # app.delete(path,handler)
-       
-    🥇 Testing Tool POSTMAN
-        👍 Its a REST API TESTING Tool
-        👍 Its very easy to work and test the REST API 😃
-        👍 API ==> Application Programming Interface
-        👍 REST => Representational State Transfer
+    /search
+        mealtype_id 
+        location_id
+        cuisine_id
+        cost_for_two => l_cost - h_cost
+        sort => high to low or low to high
+        per_page => 2 result (restaurant)
     
-    🥈 HTTP States
-        👍 100 ... 199
-        👍 200 ... 299 response message e.g 200 (ok) all is well
-        👍 300 ... 399
-        👍 400 ... 499 (client error) 404 (Not Found) Data us not available
-        👍 500 ... 599 (server error)
+    /get-restaurant-details-id
+    /get-menu-items-by-restaurant-id
 
-        🏁 200,404,401,403,500
+    /payment
+    /save-order
 
+    #google-login 
+
+Framework => Express => MVC
+    => JAVA => SpringBoot
+    => PHP => Laravel, CodeIgniter
+    => C# => .Net
+    => Python => DJango
+
+    M => Model => Database 
+    V => View => UI (UserInterface) => ReactJS
+    C => Controller => Handles All The Operation
