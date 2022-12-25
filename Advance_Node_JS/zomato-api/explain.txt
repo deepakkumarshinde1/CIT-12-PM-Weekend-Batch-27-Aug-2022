@@ -28,3 +28,87 @@ Framework => Express => MVC
     M => Model => Database 
     V => View => UI (UserInterface) => ReactJS
     C => Controller => Handles All The Operation
+
+    SQL Base Database
+        👍 SQL => Structure Query Language
+        👍 Structure => Database => Tables => Rows => Columns
+        👍 Schema (Table Layout)
+        👍 Create a Relation Between 2 or More Table 
+        👍 To Perform Complex Operation 
+            🔢 Query  and Procedures
+        👍 They may take more time for complex query.
+        👍 You need a more space and a require RAM for Operation
+
+    No SQL Base Database
+        👍 We Don't Have a Language
+        👍 Structure => Database => Collections => Documents => Fields
+        👍 Schema Less
+        👍 Create a 
+                🔢 Relation Between 2 or More Collections Documents 
+                🔢 Embed Data from one collection to other collection
+        👍 To Perform Complex Operation 
+            🔢 Mongo DB Operators
+            🔢 Aggregate Framework
+        👍 They may take less time for complex query.
+        👍 You need a less space and a require RAM for Operation
+
+
+    
+
+    Basic Commands of MongoDB
+        Database commands
+            Database => batch12api
+            # see list of db => show dbs
+            # create Database =>  use batch12api
+            # switch on db to other Database => use batch12api
+            # check a current database => db
+            # delete db.dropDatabase()
+
+            =>  When we create a database in mongoDB you can see db in a list if 
+                that database has/have min one collection
+
+            use batch12api 
+            db (global object) = batch12api
+
+            use sampleDB
+            db = sampleDB 
+
+        Collections Commands 
+            => ( collection small case ), dont give a dash(-) , you can give a _
+            =>  collections must be plural  => apple(single) => apples (plural)
+            # create 
+                db.createCollection('collectionname')
+            # delete 
+                db.collectionname.drop()
+            # see list of collections => show collections
+
+        Documents Command ( CRUD => Operators )
+            Record / Object / Document => { "name":"deepak" }
+            # add/insert/save/create a Record
+                    # single 
+                        db.collectionname.insert({
+                                                "city": "mumbai",
+                                                "city_id": 1,
+                                                "location_id": 1,
+                                                "locality": "CST"
+                                            })
+                    # multi records
+            # read a record
+                db.collectionname.find()
+            # update a record
+            # delete a record
+
+        MongoDB Object ID
+            => unique number + not null => primary key
+            => "_id" => primary key
+            => ObjectId => Data Type (BSON)
+            => In MongoDB Records/ Document are sorted in BSON => Binary JSON (Javascript Object Notation)
+            "_id" : ObjectId("63a7f18d5b613397ff68da43")
+
+            # 63a7f18d 5b613397ff 68da43 => 12 Bytes => 24 characters
+            
+            # 63a7f18d => A 4-byte timestamp
+            # 5b613397ff => A 5-byte random value generated once per process.
+            # 68da43 => A 3-byte incrementing counter, initialized to a random value.
+
+        Aggregate Framework
