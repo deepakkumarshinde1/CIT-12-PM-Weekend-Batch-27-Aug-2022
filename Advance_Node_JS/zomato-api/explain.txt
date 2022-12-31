@@ -93,10 +93,18 @@ Framework => Express => MVC
                                                 "locality": "CST"
                                             })
                     # multi records
+                        db.collectionname.insertMany([{...},{...},{...}])
             # read a record
                 db.collectionname.find()
+                db.collectionname.find(filter, projection)
+                db.locations.find({city_id:2},{locality:1}) => in projection 1 means to include
+                db.locations.find({city_id:2},{locality:1,_id:0,city:1})
             # update a record
+                db.collectionname.updateOne({filter},{criteria}) =>  in filter we need to use operator => $
+                db.collectionname.updateMany({filter},{criteria})
             # delete a record
+                db.collectionname.deleteOne({filter})
+                db.collectionname.deleteMany({filter})
 
         MongoDB Object ID
             => unique number + not null => primary key
@@ -111,4 +119,28 @@ Framework => Express => MVC
             # 5b613397ff => A 5-byte random value generated once per process.
             # 68da43 => A 3-byte incrementing counter, initialized to a random value.
 
-        Aggregate Framework
+    operator update and some of are for find
+        $set => data update/ add new Fields
+        $unset => remove Fields
+        $rename => Fields
+        $and => logical
+        $or => logical
+        $in => in is used to search in array
+        $gt => Greater Then
+        $gte => Greater Then Equals To
+        $lt => Less Then
+        $lte => Less Then Equals To
+
+    # Aggregate Framework
+        index
+        pipeline
+        skep
+        Relation Schema
+
+
+    handel 5 - 10 website => node js
+    without node js => 30 to 35
+
+    5*7000
+
+    2-3 => 800 => 3000

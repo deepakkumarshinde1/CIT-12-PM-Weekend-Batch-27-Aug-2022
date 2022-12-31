@@ -1,11 +1,5 @@
 [
   {
-    "city": "mumbai",
-    "city_id": 1,
-    "location_id": 1,
-    "locality": "CST"
-  },
-  {
     "city": "Pune",
     "city_id": 2,
     "location_id": 2,
