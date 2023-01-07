@@ -144,3 +144,23 @@ Framework => Express => MVC
     5*7000
 
     2-3 => 800 => 3000
+    
+Driver => to Drive    
+    Mongoose 
+        Mongoose is a lib form mongoDB
+        Mongoose run to top of MongoDB Driver
+        Mongoose works async way
+        Schema Base Lib
+        Mongoose Support Aggregation Framework
+        Mongoose have preValidator i.e before insertion
+        ODM => Object Driven Model
+    
+    npm i mongoose
+
+    we need to make connection one
+
+    mongoose.connect().then(()=>{
+
+    }).catch((error)=>{
+
+    })
