@@ -2,6 +2,10 @@ API
     /get-location-list 
     /get-restaurant-list-by-location-id
     /get-meal-type-list
+    /get-restaurant-details-id (assignment)
+    /get-menu-items-by-restaurant-id
+
+    /save-order
 
     /search
         mealtype_id 
@@ -11,11 +15,11 @@ API
         sort => high to low or low to high
         per_page => 2 result (restaurant)
     
-    /get-restaurant-details-id
-    /get-menu-items-by-restaurant-id
+    
+    
 
     /payment
-    /save-order
+    
 
     #google-login 
 
@@ -164,3 +168,18 @@ Driver => to Drive
     }).catch((error)=>{
 
     })
+
+
+    search a restaurant => select menu => made payment => save order
+
+    {
+        email_id:"deepakkumar.shinde0@gmail.com",
+        mobile_no:"8007070845",
+        order_list:[{order_item:"Panner Masala" , qty:2 , price:220, total:440},
+                    {order_item:"Roti" , qty:20 , price:10, total:200}],
+        total_prices:640,
+        receipt_id:1
+        order_id:'order_123456',
+        payment_id:'payment_123456'
+        payment_status:1
+    }

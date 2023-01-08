@@ -1,18 +1,17 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const APIRouter = require("./Routes/APIRouter");
 const app = express();
-const PORT = 5004;
-const MONGODB_URI = "mongodb://127.0.0.1:27017/batch12zomatoapi";
 app.use("/", APIRouter);
 
 // mongodb connection
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT, () => {
       console.log("connection success");
-      console.log("Application is running on PORT ", PORT);
+      console.log("Application is running on PORT ", process.env.PORT);
     });
   })
   .catch((error) => {
