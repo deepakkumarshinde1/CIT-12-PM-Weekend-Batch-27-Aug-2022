@@ -1,0 +1,86 @@
+React JS
+    Basic Intro React
+    Create React
+    Directory Structure
+    Component 
+        Class Component
+        State & Props
+        Function Component
+        Hooks
+        React Lifecycle Hooks
+    CSS styling react
+    Create a Zomato App Application
+    Routing
+    Work with backend API
+    How to make a payment
+    how to google login
+    Deployment Process
+
+React => Library => User Interface 
+    Single Page Application
+        React => Lib
+        Angular => Frame work
+            TypeScript
+        Vue => Framework
+
+    Single Page Application
+    Tradition Application
+
+React 
+    => Learning Simple
+        => Javascript 
+        => Typescript
+    => Class Or Function
+    => 3rd Lib integrate
+    => Dev Tool 
+    => State Redux Or Context API
+    => Application Testing 
+    => App Building 
+
+How to install React
+    npx create-react-app app-name
+    npm => Node Package Manager ::- install , run, uninstall 
+    npx => node package executor => run time --> run --> remove
+
+
+     react => main lib , function , class , hooks , abstract class, interface
+     react-dom => web page operation (VDOM), event handling , element handling , element update
+     react-scripts => 
+        run project, 
+        makes bundling of project,
+        create a production built,
+        test app
+
+    
+    Public 
+        index.html
+        robot.txt
+        manifest.json
+        favicon.ico
+        images/
+
+    SRC (development folder)
+        JS
+        CSS
+        .test.js
+
+        main entry file => index.js
+        App.js => Component
+
+    Component 
+        => Basic Building Block of Application
+        => To develop Application
+
+        => import statement
+        => export statement
+        => l
+        
+        => whatever we write like HTML in component , we call it as JSX => Javascript & XML
+        => JSX must bind in enclose element eg. <div></div> or <></>
+        => class mut be replace with className
+
+
+        React 16.8 Before we need to use a class component
+        React 16.8 After we need to use a function component
+
+        Legacy project class component 
