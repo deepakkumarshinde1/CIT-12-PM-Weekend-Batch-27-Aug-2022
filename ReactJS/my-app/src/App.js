@@ -1,11 +1,16 @@
-import React from "react";
+import Counter from "./components/Counter";
+import { useCounterContext } from "./context/CounterContext";
 
 // create functional component
 function App() {
+  let { counterList } = useCounterContext();
   return (
     <>
-      <h1 className="text-green">Hello HTML</h1>
-      <span>Hello</span>
+      <center>
+        {counterList.map((counter, index) => {
+          return <Counter start={counter} index={index} />;
+        })}
+      </center>
     </>
   );
 }

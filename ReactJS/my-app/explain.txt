@@ -84,3 +84,28 @@ How to install React
         React 16.8 After we need to use a function component
 
         Legacy project class component 
+
+// state ==> handel data in side a react component
+// states are available in class component
+// we need to state hook
+// hook => spacial function & they can handel a complex operation in react
+// react hook
+// use => useState()
+// where the state updates ... component rerender
+// state works inside that component only
+
+
+send a data from parent to child => props
+props are readonly in nature
+
+
+single source of truth 
+    => bring all function and states in app.js
+        ==> props drilling 
+        ===> App.js ==== props ====> child ===== prop ===> child
+    => use a useContext Hook
+        context/data in centralize
+        createAContext
+        Context.Provider
+        useContext
+    => use Redux
