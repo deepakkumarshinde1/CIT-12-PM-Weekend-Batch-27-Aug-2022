@@ -1,0 +1,27 @@
+component life cycle => 
+    class
+        load => mounting 
+            constructor()
+            render()
+            componentDidMount()
+
+        unload =>  unmounting
+            componentWillUnmount()
+
+        update => updating
+            componentDidUpdate()
+
+    function
+        load => mounting 
+            useEffect(()=>{}, [])    
+
+        unload =>  unmounting
+            useEffect(()=>{
+                return ()=>{
+                    unmounting
+                }
+            }, [])    
+
+        update => updating
+            useEffect(()=>{}, [stateVariable])    
+            
