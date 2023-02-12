@@ -7,9 +7,12 @@ module.exports.getRestaurantList = async (request, response) => {
    * request.body {location_id:1} => {}
    */
 
-  let { loc_id } = request.params;
+  let { loc_id, rest_name } = request.params;
   try {
-    let result = await RestaurantModel.find({ location_id: loc_id });
+    let result = await RestaurantModel.find({
+      location_id: loc_id,
+      name: { $regex: rest_name + ".*", $options: "i" },
+    });
     response.status(200).send({ status: true, result });
   } catch (error) {
     response.status(500).send({ status: false, error });

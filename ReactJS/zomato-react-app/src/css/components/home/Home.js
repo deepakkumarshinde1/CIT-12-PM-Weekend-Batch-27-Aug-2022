@@ -3,7 +3,14 @@ import { useMainContext } from "./../../../context/MainContext";
 import { useEffect } from "react";
 
 let Home = () => {
-  let { getLocationList, locationList } = useMainContext();
+  let {
+    getLocationList,
+    locationList,
+    searchRest,
+    getRestaurantList,
+    setSelectedLocation,
+    selectedLocation,
+  } = useMainContext();
   useEffect(() => {
     getLocationList();
   }, []);
@@ -25,11 +32,14 @@ let Home = () => {
               Find the best restaurants, cafés, and bars
             </p>
             <div className="search w-50 d-flex mt-3">
-              <select className="form-select mb-3 mb-lg-0 w-50 me-lg-3 py-2 px-3">
-                <option>Select Location</option>
+              <select
+                className="form-select mb-3 mb-lg-0 w-50 me-lg-3 py-2 px-3"
+                onChange={(event) => setSelectedLocation(event.target.value)}
+              >
+                <option value="">Select Location</option>
                 {locationList.map((value, key) => {
                   return (
-                    <option key={key}>
+                    <option key={key} value={value.location_id}>
                       {value.name}, {value.city}
                     </option>
                   );
@@ -43,6 +53,9 @@ let Home = () => {
                   type="text"
                   className="form-control py-2 px-3"
                   placeholder="Search for restaurants"
+                  value={searchRest}
+                  onChange={getRestaurantList}
+                  disabled={selectedLocation === "" ? true : false}
                 />
               </div>
             </div>

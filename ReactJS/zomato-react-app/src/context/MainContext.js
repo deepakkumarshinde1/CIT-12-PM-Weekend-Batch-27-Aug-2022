@@ -7,6 +7,8 @@ export const useMainContext = () => useContext(MaiContext);
 
 export const MainContextProvider = ({ children }) => {
   let [locationList, setLocationList] = useState([]);
+  let [searchRest, setSearchRest] = useState("");
+  let [selectedLocation, setSelectedLocation] = useState("");
 
   let getLocationList = async () => {
     let { data } = await axios.get(BASE_URL + "get-location-list");
@@ -17,9 +19,22 @@ export const MainContextProvider = ({ children }) => {
     }
   };
 
+  let getRestaurantList = async (event) => {
+    setSearchRest(event.target.value);
+    if (event.target.value !== "") {
+      let url = `${BASE_URL}get-restaurant-list/${selectedLocation}/${event.target.value}`;
+      let { data } = await axios.get(url);
+      console.log(data);
+    }
+  };
+
   let values = {
     getLocationList,
     locationList,
+    searchRest,
+    getRestaurantList,
+    selectedLocation,
+    setSelectedLocation,
   };
   return (
     <>
