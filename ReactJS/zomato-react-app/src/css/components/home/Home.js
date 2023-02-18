@@ -10,9 +10,12 @@ let Home = () => {
     getRestaurantList,
     setSelectedLocation,
     selectedLocation,
+    restaurantList,
+    getMealTypeList,
   } = useMainContext();
   useEffect(() => {
     getLocationList();
+    getMealTypeList();
   }, []);
   return (
     <>
@@ -34,7 +37,9 @@ let Home = () => {
             <div className="search w-50 d-flex mt-3">
               <select
                 className="form-select mb-3 mb-lg-0 w-50 me-lg-3 py-2 px-3"
-                onChange={(event) => setSelectedLocation(event.target.value)}
+                onChange={(event) => {
+                  setSelectedLocation(event.target.value);
+                }}
               >
                 <option value="">Select Location</option>
                 {locationList.map((value, key) => {
@@ -45,18 +50,30 @@ let Home = () => {
                   );
                 })}
               </select>
-              <div className="w-75 input-group">
-                <span className="input-group-text bg-white">
-                  <i className="fa fa-search text-primary"></i>
-                </span>
-                <input
-                  type="text"
-                  className="form-control py-2 px-3"
-                  placeholder="Search for restaurants"
-                  value={searchRest}
-                  onChange={getRestaurantList}
-                  disabled={selectedLocation === "" ? true : false}
-                />
+              <div className="w-75 position-relative">
+                <div className=" input-group w-100 position-relative">
+                  <span className="input-group-text bg-white">
+                    <i className="fa fa-search text-primary"></i>
+                  </span>
+                  <input
+                    type="text"
+                    className="form-control py-2 px-3"
+                    placeholder="Search for restaurants"
+                    value={searchRest}
+                    onChange={getRestaurantList}
+                    disabled={selectedLocation === "" ? true : false}
+                  />
+                </div>
+                <ul className="list-group position-absolute w-100">
+                  {restaurantList.map((restaurant, index) => {
+                    return (
+                      <li key={index} className="list-group-item">
+                        {restaurant.name} ({restaurant.aggregate_rating}),{" "}
+                        {restaurant.locality}
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </section>

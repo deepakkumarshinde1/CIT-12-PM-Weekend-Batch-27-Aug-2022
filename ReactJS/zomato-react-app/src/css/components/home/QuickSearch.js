@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useMainContext } from "../../../context/MainContext";
 let QuickSearch = () => {
   let navigate = useNavigate();
-  let mealTypes = [1, 2, 3, 4, 5, 6];
+  let { mealType } = useMainContext();
   return (
     <>
       <section className="col-12 px-0 d-flex justify-content-between flex-wrap">
-        {mealTypes.map((meal_type_item, index) => {
+        {mealType.map((meal_type_item, index) => {
           return (
             <section
               key={index}
@@ -14,15 +15,13 @@ let QuickSearch = () => {
               onClick={() => navigate("/search")}
             >
               <img
-                src="/images/search-item.png"
+                src={"/images/" + meal_type_item.image}
                 alt=""
                 className="image-item"
               />
               <div className="pt-3 px-2">
-                <h4 className="text-navy">Breakfast</h4>
-                <p className="small text-muted">
-                  Start your day with exclusive breakfast options
-                </p>
+                <h4 className="text-navy">{meal_type_item.name}</h4>
+                <p className="small text-muted">{meal_type_item.content}</p>
               </div>
             </section>
           );
