@@ -1,7 +1,16 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useMainContext } from "../../../context/MainContext";
 import FilterRestaurant from "./FilterRestaurant";
 
 let Filter = () => {
   let restaurantList = [1, 2];
+  let { id, type } = useParams();
+
+  let { getLocationList, locationList } = useMainContext();
+  useEffect(() => {
+    if (locationList.length == 0) getLocationList();
+  }, []);
   return (
     <>
       <div className="container-fluid">
@@ -20,7 +29,7 @@ let Filter = () => {
         {/* <!-- section --> */}
         <div className="row">
           <div className="col-12 px-5 pt-4">
-            <p className="h3">Breakfast Places In Mumbai</p>
+            <p className="h3">{type} Places In Mumbai</p>
           </div>
           {/* <!-- food item --> */}
           <div className="col-12 d-flex flex-wrap px-lg-5 px-md-5 pt-4">
@@ -43,11 +52,14 @@ let Filter = () => {
                     Select Location
                   </label>
                   <select className="form-select form-select-sm">
-                    <option value="">option-1</option>
-                    <option value="">option-1</option>
-                    <option value="">option-1</option>
-                    <option value="">option-1</option>
-                    <option value="">option-1</option>
+                    <option value="">Select Location</option>
+                    {locationList.map((value, key) => {
+                      return (
+                        <option key={key} value={value.location_id}>
+                          {value.name}, {value.city}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
                 <p className="mt-4 mb-2 fw-bold">Cuisine</p>
@@ -142,8 +154,8 @@ let Filter = () => {
             </div>
             {/* <!-- search result --> */}
             <div className="col-12 col-lg-8 col-md-7">
-              {restaurantList.map((restaurant) => {
-                return <FilterRestaurant />;
+              {restaurantList.map((restaurant, key) => {
+                return <FilterRestaurant key={key} />;
               })}
               <div className="col-12 pagination d-flex justify-content-center">
                 <ul className="pages">

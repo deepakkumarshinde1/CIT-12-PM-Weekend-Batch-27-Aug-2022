@@ -12,10 +12,11 @@ let Home = () => {
     selectedLocation,
     restaurantList,
     getMealTypeList,
+    mealType,
   } = useMainContext();
   useEffect(() => {
-    getLocationList();
-    getMealTypeList();
+    if (locationList.length == 0) getLocationList();
+    if (mealType.length == 0) getMealTypeList();
   }, []);
   return (
     <>

@@ -7,7 +7,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Filter />} />
+        <Route path="/search/:id/:type" element={<Filter />} />
       </Routes>
     </>
   );

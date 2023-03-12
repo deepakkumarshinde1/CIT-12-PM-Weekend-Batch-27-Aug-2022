@@ -12,7 +12,14 @@ let QuickSearch = () => {
             <section
               key={index}
               className="px-0 d-flex border border-1 quick-search-item"
-              onClick={() => navigate("/search")}
+              onClick={() =>
+                navigate(
+                  "/search/" +
+                    meal_type_item.meal_type +
+                    "/" +
+                    meal_type_item.name.toLowerCase()
+                )
+              }
             >
               <img
                 src={"/images/" + meal_type_item.image}
