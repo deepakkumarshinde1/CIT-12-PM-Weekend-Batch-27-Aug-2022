@@ -6,7 +6,8 @@ const APIRouter = require("./Routes/APIRouter");
 const app = express();
 
 app.use(cors());
-
+app.use(express.json()); // enable post data request
+app.use(express.urlencoded({ extended: false })); // enable post data request
 app.use("/", APIRouter);
 
 // mongodb connection

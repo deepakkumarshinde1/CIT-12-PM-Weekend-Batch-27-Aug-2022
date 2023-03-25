@@ -44,20 +44,19 @@ module.exports.filter = async (request, response) => {
   // 2st => 2
   // [100,200, 300,400, 500,600, 700,800]
   //    1          2       3       3
-  let data = {
-    page: 2,
-    perPage: 2,
-  };
-  let sort = data.sort ? data.sort : 1;
+  let { mealtype, location, cuisine, minCost, maxConst, sort, page } =
+    request.body;
+  let perPage = 2;
+  sort = sort ? sort : 1;
   let filter = {}; // runtime create
-  let startIndex = data.page * data.perPage - data.perPage; // 2
-  let lastIndex = data.page * data.perPage; //2
+  let startIndex = page * perPage - perPage; // 2
+  let lastIndex = page * perPage; //2
 
-  if (data.mealtype !== undefined) filter["mealtype_id"] = data.mealtype;
-  if (data.location !== undefined) filter["location_id"] = data.location;
-  if (data.cuisine !== undefined) filter["cuisine_id"] = { $in: data.cuisine };
-  if (data.minCost !== undefined && data.maxConst !== undefined)
-    filter["min_price"] = { $lte: data.maxConst, $gte: data.minCost };
+  if (mealtype !== undefined) filter["mealtype_id"] = mealtype;
+  if (location !== undefined) filter["location_id"] = location;
+  if (cuisine !== undefined) filter["cuisine_id"] = { $in: cuisine };
+  if (minCost !== undefined && maxConst !== undefined)
+    filter["min_price"] = { $lte: maxConst, $gte: minCost };
 
   // it must not equals to undefined
   console.log(filter);

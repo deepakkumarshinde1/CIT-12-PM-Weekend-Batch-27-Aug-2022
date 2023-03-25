@@ -16,7 +16,7 @@ APIRouter.get(
 
 APIRouter.get("/api/get-menu-list/:rest_id", restaurant.getMenuItemList);
 
-APIRouter.get("/api/filter", restaurant.filter);
+APIRouter.post("/api/filter", restaurant.filter);
 // GET (Read), POST (Search/Save), PUT(Update), DELETE(delete)
 
 // HTTP Protocol (Cache(limited) /Body (unlimited))
